@@ -1,0 +1,11 @@
+QUERY 1
+
+SELECT `students`.`name` , `students`.`surname` , `degrees`.`name` FROM `students` JOIN `degrees` ON students.degree_id = degrees.id WHERE degrees.name = "Corso di Laurea in Economia";
+
+QUERY 2
+
+SELECT * FROM `departments` JOIN `degrees` ON departments.id = degrees.department_id WHERE departments.name = "Dipartimento di Neuroscienze" AND degrees.level = 'Magistrale';
+
+QUERY 3
+
+SELECT `courses`.* FROM `courses` JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id` WHERE `course_teacher`.`teacher_id` = 44;
